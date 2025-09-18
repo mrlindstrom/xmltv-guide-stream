@@ -5,7 +5,7 @@ services:
         dockerfile: Dockerfile
       image: vjepg
       ports:
-        - 8001:8000
+        - 8000:8000
       environment:
         - XMLTV_SRC=http://10.1.0.200:8409/iptv/xmltv.xml
         - XMLTV_TZ=America/Chicago
