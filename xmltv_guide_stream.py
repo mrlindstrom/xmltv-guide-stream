@@ -564,9 +564,14 @@ def start_hls_from_mp4_loop_reencode(mp4_path:str, out_dir:str, playlist:str,
     else:
         cmd += ['-c:a','aac','-b:a','128k']
     cmd += ['-fps_mode:v','vfr']
-    cmd += ['-f','hls','-hls_time','2','-hls_list_size','60',
-            '-hls_flags','delete_segments+independent_segments+temp_file',
-            '-hls_playlist_type','event', out_path]
+    cmd += [
+      '-f','hls',
+      '-hls_time','2',                 # segment duration
+      '-hls_list_size','10',           # keep only last 10 segments in playlist
+      '-hls_delete_threshold','2',     # start deleting when older than list_size+2
+      '-hls_flags','delete_segments+independent_segments+temp_file+omit_endlist',
+      out_path
+    ]
     return subprocess.Popen(cmd)
 
 def start_hls_from_mp4_loop_copy(mp4_path:str, out_dir:str, playlist:str,
