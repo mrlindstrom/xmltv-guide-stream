@@ -32,4 +32,4 @@ ENV XMLTV_SRC="" \
     XMLTV_MAXRATE="" \
     XMLTV_BUFSIZE=""
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]

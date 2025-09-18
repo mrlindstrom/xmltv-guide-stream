@@ -7,7 +7,7 @@ services:
       ports:
         - 8001:8000
       environment:
-        - XMLTV_SRC=http://10.1.0.110:8410/iptv/xmltv.xml
+        - XMLTV_SRC=http://10.1.0.200:8409/iptv/xmltv.xml
         - XMLTV_TZ=America/Chicago
         - XMLTV_HOURS=2
         - XMLTV_PORT=8000
