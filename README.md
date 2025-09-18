@@ -197,23 +197,8 @@ cache_blocks/               # MP4 loops per 30-min block (generated)
 music/                      # optional audio files
 ```
 
-Add a `.gitignore` in your repo so you don’t commit generated media or personal music:
-```gitignore
-__pycache__/
-*.pyc
-.venv/
-hls_out/
-cache_blocks/
-*.lock
-*.tmp
-*.mp4
-*.ts
-*.m3u8
-music/
-```
-
 ---
 
 ## License
 
-Suggested: **MIT** or **Apache-2.0** so others can reuse and contribute. See <https://choosealicense.com/>.
+**MIT**
