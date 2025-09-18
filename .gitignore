@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Runtime/output
+hls_out/
+cache_blocks/
+*.lock
+*.tmp
+*.mp4
+*.ts
+*.m3u8
+
+# Optional (don’t publish your personal music by default)
+music/
+
+old/
+src/
+docker-compose.yml
+Dockerfile
+Montserrat-VariableFont_wght.ttf
