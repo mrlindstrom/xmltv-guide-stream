@@ -20,6 +20,7 @@ EXPOSE 8000
 
 # Vars are intentionally left blank here; compose can set them.
 # If they are blank at runtime, the entrypoint will fill defaults.
+ENV PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 ENV XMLTV_SRC="" \
     XMLTV_TZ="" \
     XMLTV_HOURS="" \
