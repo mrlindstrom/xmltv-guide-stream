@@ -1,0 +1,24 @@
+services:
+  programGuide:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      image: vjepg
+      ports:
+        - 8001:8000
+      environment:
+        - XMLTV_SRC=http://10.1.0.110:8410/iptv/xmltv.xml
+        - XMLTV_TZ=America/Chicago
+        - XMLTV_HOURS=2
+        - XMLTV_PORT=8000
+        - XMLTV_NVPRESET=p1
+        - XMLTV_RC=cbr
+        - XMLTV_BITRATE=3000k
+        - XMLTV_MAXRATE=3000k
+        - XMLTV_BUFSIZE=6000k
+      volumes:
+        - ./cache_blocks:/cache_blocks
+        - ./music:/music:ro
+        - ./themes:/themes:ro
+      tmpfs:
+        - /hls_out:size=64M

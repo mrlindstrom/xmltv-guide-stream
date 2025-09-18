@@ -22,6 +22,4 @@ music/*
 
 old/
 src/
-docker-compose.yml
-Dockerfile
 Montserrat-VariableFont_wght.ttf
