@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 set -e
 
 # Defaults if unset or empty (null)
