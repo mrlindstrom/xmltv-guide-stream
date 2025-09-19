@@ -52,13 +52,13 @@ python xmltv_guide_stream.py \
   --tz America/Chicago \
   --hours 3 \
   --res 1920x1080 \
-  --http-port 8001 \
+  --http-port 8000 \
   --vcodec h264_nvenc --nvenc-preset p5 --rc cbr \
   --bitrate 3000k --maxrate 3000k --bufsize 6000k \
   --theme classic
 ```
 
-Open **`http://localhost:8001/guide.m3u8`** in VLC.
+Open **`http://localhost:8000/guide.m3u8`** in VLC.
 
 ---
 
