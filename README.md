@@ -32,6 +32,26 @@ Old cable-style TV guide that ingests **XMLTV**, renders a scrolling guide (time
 
 ---
 
+
+## Docker quick start
+```bash
+# 1) Clone the git repo
+git clone https://github.com/xmltv-guide-stream/xmltv-guide-stream.git
+
+# 2) Change directory into the cloned repo
+cd xmltv-guide-stream
+
+# 3) Run docker compose build
+docker compose build
+
+# 4) Edit the docker-compose.yml file to match your XML TV source and timzezone
+XMLTV_SRC=http://<IP of ErsatzTV server>:8409/iptv/xmltv.xml
+XMLTV_TZ=<Your TZ>
+
+# 5) Run the docker container (add -d after you make sure verything starts up correctly the first time)
+docker compose up
+```
+
 ## Quick start
 
 ```bash
